@@ -1,0 +1,130 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+h2, h3, h4 {
+    margin: 10px 0;
+}
+
+p {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Container for the recipe cards */
+.recipe-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Align cards to the start, even if there are fewer results */
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Individual recipe card styles */
+.recipe-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: calc(20% - 20px); /* 3 items per row for most cases */
+    padding: 20px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect */
+.recipe-card:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+}
+
+/* Recipe image */
+.recipe-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Title and subtitle */
+.recipe-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.recipe-subtitle {
+    font-size: 18px;
+    color: #777;
+}
+
+/* Description, Ingredients, and Steps */
+.recipe-description {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.ingredients-list, .steps-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.ingredients-list li, .steps-list li {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+h4 {
+    font-size: 18px;
+    color: #333;
+    margin-top: 10px;
+}
+
+/* Styling for the ingredients and steps list */
+.ingredients-list li::before, .steps-list li::before {
+    content: "•";
+    color: #4CAF50;
+    margin-right: 8px;
+}
+
+.steps-list {
+    margin-bottom: 0;
+}
+
+/* Step Image Styling */
+.step-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 10px 0;
+}
+
+/* Responsive layout */
+@media (max-width: 1200px) {
+    .recipe-card {
+        width: calc(25% - 20px); /* 4 items per row for large screens */
+    }
+}
+
+@media (max-width: 992px) {
+    .recipe-card {
+        width: calc(33.33% - 20px); /* 3 items per row for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .recipe-card {
+        width: calc(50% - 20px); /* 2 items per row for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .recipe-card {
+        width: 100%; /* 1 item per row for very small screens */
+    }
+}
